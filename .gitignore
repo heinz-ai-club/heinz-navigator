@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Navigator: keep the folder, ignore downloaded documents
+docs_corpus/raw/*
+!docs_corpus/raw/.gitkeep

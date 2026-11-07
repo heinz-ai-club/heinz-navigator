@@ -1,0 +1,74 @@
+/* Minimal, dark, one accent color, system fonts. */
+:root {
+  --bg: #0b0b0d;
+  --panel: #151518;
+  --border: #2a2a30;
+  --text: #f2f2f4;
+  --muted: #a0a0aa;
+  --accent: #4da3ff;
+  --warn: #f5c451;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+main { max-width: 720px; margin: 0 auto; padding: 56px 20px 40px; }
+
+h1 { font-size: 2.2rem; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 6px; }
+h2 { font-size: 1rem; font-weight: 600; margin: 28px 0 8px; color: var(--muted);
+     text-transform: uppercase; letter-spacing: 0.06em; }
+.subtitle { color: var(--muted); margin: 0 0 36px; }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+.tabs button {
+  background: none; border: 1px solid var(--border); color: var(--muted);
+  padding: 8px 16px; border-radius: 999px; font: inherit; cursor: pointer;
+}
+.tabs button[aria-selected="true"] { color: var(--text); border-color: var(--accent); }
+
+label { display: block; margin: 16px 0 6px; color: var(--muted); font-size: 0.9rem; }
+input, textarea {
+  width: 100%; background: var(--panel); color: var(--text);
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 12px 14px; font: inherit;
+}
+textarea { resize: vertical; }
+
+form > button {
+  margin-top: 16px; background: var(--accent); color: #04121f; border: 0;
+  padding: 10px 24px; border-radius: 999px; font: inherit; font-weight: 600; cursor: pointer;
+}
+form > button:disabled { opacity: 0.5; cursor: wait; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.result { margin-top: 28px; }
+.answer { white-space: pre-wrap; overflow-wrap: anywhere; }
+.notice {
+  border: 1px solid var(--warn); color: var(--warn);
+  border-radius: 12px; padding: 10px 14px; margin-bottom: 16px; font-size: 0.9rem;
+}
+.error { color: #ff8a8a; }
+.loading { color: var(--muted); }
+
+ul { padding-left: 20px; margin: 0; }
+li { margin: 6px 0; overflow-wrap: anywhere; }
+a { color: var(--accent); }
+.snippet, .small { color: var(--muted); font-size: 0.85rem; }
+
+footer {
+  margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border);
+  color: var(--muted); font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  main { padding-top: 32px; }
+  h1 { font-size: 1.7rem; }
+}

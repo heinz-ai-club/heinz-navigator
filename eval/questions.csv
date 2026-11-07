@@ -1,0 +1,3 @@
+id,feature,category,question,program,completed_courses,verified_answer,source_url,split,verified_by,date_verified
+EXAMPLE1,ask,policies,"(Example row, delete before the baseline) How many units can I take per semester?",,,"(Write the verified answer here)","(Public link that proves it)",dev,AB/CD,2026-11-15
+EXAMPLE2,check,requirements,"(Example row, delete before the baseline) First-year MS-AIM student after one semester",MS-AIM,95-888;94-806,"(List the remaining requirements)","(Handbook link)",dev,AB/CD,2026-11-15
